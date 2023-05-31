@@ -1,97 +1,74 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset CSS */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-p{
-    max-width: 100%;
+img, svg, video, canvas{
+  display: block;
+  width: 100%;
 }
 
-:root{
-    /*Color variables */
-    --white : hsl(0, 0%, 100%);
-    --light-gray: hsl(212, 45%, 89%);
-    --grayish-blue: hsl(220, 15%, 55%);
-    --dark-blue: hsl(218, 44%, 22%);
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
 }
 
 body{
-    background-color: var(--light-gray);
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-}
-
-.container{
-    background-color: var(--white);
-    max-width: 20%;
-    margin: auto;
-    /* padding: 55px; */
-    padding: 35px;
-    height: 100%;
-    border-radius: 10px;
-    margin-top: 80px;
-    margin-bottom: 40px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.image > img{
-    display: block;
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.bold{
-    font-weight: 700;
-}
-
-.light{
-    font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 
-.attribution { 
-    font-size: 11px;
-    text-align: center;
+/* General Styling */
+:root{
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+
+  --ff-main: 'Outfit', sans-serif;
 }
 
-.attribution a { 
-    color: var(--grayish-blue); 
+body{
+  font-family: var(--ff-main);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Light-gray);
 }
 
+main{
+  background-color: var(--White);
+  width: 90%;
+  max-width: 460px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  gap: 1rem;
+}
 
-/* Media Queries */
+main > img{
+  border-radius: 1rem;
+}
 
-@media (max-width: 767px) {
-    .container {
-      max-width: 90%;
-      padding: 20px;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* For screens between 768px and 1024px */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .container {
-      max-width: 40%;
-      padding: 30px;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
-  }
-  
-  /* For screens larger than 1024px */
-  @media (min-width: 1025px) {
-    .container {
-      max-width: 25%;
-      padding: 40px;
-      margin-top: 100px;
-    }
-  }
+.main__description{
+  display: grid;
+  gap: 1rem;
+  padding: 0.8rem;
+}
 
+h1{
+  font-size: 1.5rem;
+}
+
+p{
+  text-align: center;
+}
